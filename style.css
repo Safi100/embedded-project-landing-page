@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 a{
     text-decoration: none;
@@ -12,6 +13,7 @@ a{
     max-width: 1200px;
     margin: auto;
 }
+/* main */
 .main_row{
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +27,6 @@ a{
     font-size: 18px;
 }
 .main_row .hero_image{
-    width: 550px;
     min-width: 420px;
 }
 .hero_image img{
@@ -33,6 +34,78 @@ a{
     height: 100%;
     object-fit: contain;
 }
+
+/* code */
+.code .section_content{
+    background: #f8f8fe;
+}
+.code .curve {
+    display: flex;
+}
+.curve img{
+    width: 100%;
+}
+.code_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.code_row > * {
+    flex-basis: 45%;
+}
+.code .compiler{
+    min-width: 600px;
+    height: 350px;
+    overflow-y: scroll;
+    border: 3px solid black;
+}
+.compiler img{
+    width: 100%;
+    object-fit: cover;
+}
+/* components */
+.components_row{
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.components_row .component{
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+    min-width: 300px;
+    background: #f8f8fe;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.component img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+}
+.component h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.components_row .component:hover{
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.211);
+    transform: scale(1.02) rotate(2deg);
+    transition: transform 0.2s;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 967px) {
     .main_row {
         gap: 30px;
@@ -52,10 +125,20 @@ a{
         margin: 0 auto;
         max-width: 700px;
     }
+    .code_row > * {
+        flex-basis: 100%;
+    }
+    .code .compiler{
+        min-width: unset;
+        max-width: unset;
+    }
 }
 @media screen and (max-width: 421px) {
     .main_row .hero_text{
         font-size: 13px;
         font-weight: bold;
     }
-}
+    .components_row .component{
+        min-width: unset;
+    }
+}   
