@@ -17,7 +17,7 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-        <div class="container-fluid container gap-5">
+        <div class="container-fluid container gap-5 justify-content-between">
             <a href="/" class="d-flex gap-1 align-items-center text-white fs-5">
                 <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/ffffff/keyhole-shield.png" alt="">
                 <p class="m-0 fw-bold">Security System</p>
@@ -27,15 +27,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#code">Code</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#components">Components</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Members</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- main -->
-    <section class="main py-5">
+    <section id="main" class="main py-5">
         <div class="container">
             <div class="main_row">
                 <div>
@@ -46,24 +46,32 @@
         </div>
         
     </section>
-    <section class="code py-5">
+    <section id="code" class="code py-5">
         <div class="curve"><img src="./assets/bg-curve-desktop.svg" alt=""></div>
         <div class="section_content">
             <div class="container">
                 <div class="code_row pb-5">
-                    <div>code</div>
-                    <div class="compiler"><img src="./assets/code.png" alt=""></div>
+                    <div class="position-relative parent">
+                        <div class="child">
+                            <h3 class="fw-bold">Flow chart</h3>
+                            <div><img class="w-100" src="./assets/flow_chart.jpg" alt=""></div>
+                        </div>    
+                    </div>
+                    <div>
+                        <h3 class="fw-bold">Code</h3>
+                        <div class="compiler"><img src="./assets/code.png" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="components py-5">
+    <section id="components" class="components py-5">
         <div class="container">
             <h2 class="text-center fw-bold fs-1 mb-5">Components</h2>
             <div class="components_row">
                 <div class="component">
                     <img src="./assets/microcontroller.png" alt="arduino microcontroller">
-                    <h3>Microcontroller (arduino uno)</h3>
+                    <h3>Microcontroller</h3>
                 </div>
                 <div class="component">
                     <img src="./assets/keypad.png" alt="keypad">
@@ -84,7 +92,7 @@
             </div>
         </div>
     </section>
-    <section class="team-members">
+    <section id="team" class="team-members py-5">
         <div class="container">
             <h2 class="text-center fw-bold fs-1 mb-5">Team members</h2>
             <div class="team_row">
